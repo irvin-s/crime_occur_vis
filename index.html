@@ -3,17 +3,29 @@
    <meta charset="UTF-8">
    <title>Visualização Ocorrências Policiais</title>
    <script src="libs/d3.min.js"></script>
-   <style>
-      path {
-         stroke: white;
-         stroke-width: 0.5px;
-         fill: black;
-      }
+   <!--Include Leaflet CSS-->
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""/>
+   <style> 
+      #mapid { height: 500px; }  
    </style>
 </head>
 <body>
+   <h2>Roubos de smartphones</h2>
    <script type="text/javascript">
       d3.select("body").append("p").text("Hello World");
+   </script>
+   <!-- Make sure you put this AFTER Leaflet's CSS -->
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""></script>
+   <div id="mapid"></div>
+   <script>
+      var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(mymap);
    </script>
 </body>
 </html>
