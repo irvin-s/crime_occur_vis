@@ -1,3 +1,5 @@
 from flask import flask
 
-app = flask("CrimeViz")
+app = Flask("CrimeViz")
+
+app.run()
