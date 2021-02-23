@@ -3,7 +3,7 @@ from flask import Flask
 app = Flask("CrimeViz")
 
 #App routes
-@app.route("/olamundo", methods=["post"])
+@app.route("/olamundo", methods=["POST"])
 def olaMundo():
     return{"msg": "Olá Mundo!"}
 
