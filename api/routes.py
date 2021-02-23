@@ -1,9 +1,9 @@
 from flask import Flask
 
-app = Flask("CrimeViz")
+app = Flask("CrimeVis")
 
 #App routes
-@app.route("/olamundo", methods=["GET"])
+@app.route("/getoccur", methods=["GET"])
 def olaMundo():
     return{"msg": "Olá Mundo!"}
 
