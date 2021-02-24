@@ -7,4 +7,4 @@ app = Flask("CrimeVis")
 def olaMundo():
     return{"msg": "Olá Mundo!"}
 
-app.run(host = '0.0.0.0')
+app.run()
