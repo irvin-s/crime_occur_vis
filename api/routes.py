@@ -5,7 +5,7 @@ app = Flask("CrimeVis")
 
 #App routes
 @app.route("/getoccur", methods=["GET"])
-def olaMundo():
+def getOccur():
     occur = {
         [
 	{
