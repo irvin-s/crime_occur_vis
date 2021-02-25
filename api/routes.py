@@ -182,7 +182,7 @@ def getOccur():
 		"DESCR_TIPO_VEICULO": " ",
 		"QUANT_CELULAR": " ",
 		"MARCA_CELULAR": "MOTOROLA"
-	   },
+	   }
     }
     msg_j = json.dumps(occur)
     return(msg_j)
