@@ -190,4 +190,4 @@ def olaMundo():
     msg_j = json.dumps(occur)
     return(msg_j)
 
-app.run(host = '0.0.0.0')
+app.run()
