@@ -6,9 +6,7 @@ app = Flask("CrimeVis")
 #App routes
 @app.route("/getoccur", methods=["GET"])
 def getOccur():
-    occur = {
-        [
-	{
+    occur = {	{
 		"ANO_BO": "2020",
 		"NUM_BO": "877138",
 		"NUMERO_BOLETIM": "877138/2020",
@@ -185,7 +183,6 @@ def getOccur():
 		"QUANT_CELULAR": " ",
 		"MARCA_CELULAR": "MOTOROLA"
 	   },
-    ]
     }
     msg_j = json.dumps(occur)
     return(msg_j)
