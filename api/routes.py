@@ -1,13 +1,13 @@
 from flask import Flask
-import pandas as pd
 import json
+import pandas as pd
 
 app = Flask("CrimeVis")
 
 
-def readXls(month):
+def readXls():
     df = pd.read_excel("../src/dataset.xls")
-	return(df)
+    return(df)
 
 # App routes
 
@@ -15,7 +15,7 @@ def readXls(month):
 @app.route("/getoccur", methods=["GET"])
 def getOccur():
     msg_j = json.dumps(readXls())
-	return(msg_j)
+    return(msg_j)
 
 
 app.run()
