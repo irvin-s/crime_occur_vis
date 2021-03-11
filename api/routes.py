@@ -11,7 +11,7 @@ def readXls():
 #App routes
 @app.route("/getoccur", methods=["GET"])
 def getOccur():
-        msg_j = json.dumps(readXls())
+    msg_j = json.dumps(readXls())
     return(msg_j)
 
 app.run()
