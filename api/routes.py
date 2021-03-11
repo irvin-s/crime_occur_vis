@@ -7,7 +7,7 @@ app = Flask("CrimeVis")
 
 def readXls():
     df = pd.read_excel("../src/dataset.xls")
-	json_msg = df.MARCA_CELULAR[]
+    json_msg = df.to_json()
     return(json_msg)
 
 # App routes
@@ -15,7 +15,8 @@ def readXls():
 
 @app.route("/getoccur", methods=["GET"])
 def getOccur():
-    msg_j = json.dumps(readXls())
+    #msg_j = json.dumps(readXls())
+    msg_j = readXls()
     return(msg_j)
 
 
