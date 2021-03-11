@@ -70,8 +70,9 @@ def getOccur():
     msg_j = json.dumps(occur)
     return(msg_j)
 
-app.run()
-
 def readXls():
 	df = pd.read_excel("src.dataset.xls")
-	return(csv)
+	return(df)
+
+app.run()
+
