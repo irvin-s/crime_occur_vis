@@ -1,5 +1,6 @@
 from flask import Flask
 import json
+import pandas as pd
 
 app = Flask("CrimeVis")
 
@@ -69,3 +70,7 @@ def getOccur():
     return(msg_j)
 
 app.run()
+
+def readXls():
+	df = pd.read_excel("src.dataset.xls")
+	return(csv)
