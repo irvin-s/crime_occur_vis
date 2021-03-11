@@ -7,7 +7,8 @@ app = Flask("CrimeVis")
 
 def readXls():
     df = pd.read_excel("../src/dataset.xls")
-    return(df)
+	json = df.to_json()
+    return(json)
 
 # App routes
 
