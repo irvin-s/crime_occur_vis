@@ -74,5 +74,7 @@ def readXls():
 	df = pd.read_excel("src.dataset.xls")
 	return(df)
 
-app.run()
+print(readXls())
+
+#app.run()
 
