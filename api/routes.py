@@ -66,8 +66,8 @@ def getOccur():
 		"QUANT_CELULAR": " ",
 		"MARCA_CELULAR": "APPLE"
 	}
-	csv = readXls()
     msg_j = json.dumps(occur)
+	csv = readXls()
     return(msg_j)
 
 def readXls():
