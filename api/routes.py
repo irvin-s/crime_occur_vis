@@ -7,7 +7,7 @@ app = Flask("CrimeVis")
 
 def readXls():
     df = pd.read_excel("../src/dataset.xls")
-    df = df.query('MARCA_CELULAR == "APPLE" & DATAOCORRENCIA == "30/06/2020"')
+    df = df.query('MARCA_CELULAR == "APPLE" & DATAOCORRENCIA == "30/06/2020 05:30"')
     json_msg = df.to_json()
     return(json_msg)
 
