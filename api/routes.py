@@ -1,14 +1,14 @@
 from flask import Flask
-import json
 import pandas as pd
+import json
 
 app = Flask("CrimeVis")
 
 
 def readXls():
     df = pd.read_excel("../src/dataset.xls")
-	json = df.to_json()
-    return(json)
+	df.to_json()
+    return(df)
 
 # App routes
 
