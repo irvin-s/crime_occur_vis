@@ -5,10 +5,9 @@ import json
 app = Flask("CrimeVis")
 
 
-def readXls():
+def readXls(month):
     df = pd.read_excel("../src/dataset.xls")
-	df.to_json()
-    return(df)
+	return(df)
 
 # App routes
 
@@ -16,7 +15,7 @@ def readXls():
 @app.route("/getoccur", methods=["GET"])
 def getOccur():
     msg_j = json.dumps(readXls())
-    return(msg_j)
+	return(msg_j)
 
 
 app.run()
