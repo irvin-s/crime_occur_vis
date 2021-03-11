@@ -5,7 +5,7 @@ import pandas as pd
 app = Flask("CrimeVis")
 
 #App routes
-@app.route("/getoccur", methods=["GET"])
+"""@app.route("/getoccur", methods=["GET"])
 def getOccur():
     occur = {
 		"ANO_BO": "2020",
@@ -66,15 +66,14 @@ def getOccur():
 		"QUANT_CELULAR": " ",
 		"MARCA_CELULAR": "APPLE"
 	}
-    msg_j = json.dumps(occur)
 	csv = readXls()
+    msg_j = json.dumps(occur)
     return(msg_j)
-
+"""
 def readXls():
 	df = pd.read_excel("src.dataset.xls")
 	return(df)
 
 print(readXls())
-
 #app.run()
 
