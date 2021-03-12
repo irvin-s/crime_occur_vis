@@ -17,7 +17,7 @@ def readXls():
 
 @app.route("/getoccur", methods=["GET"])
 def getOccur():
-    ini_month = request.arqs.get("ini_month")
+    ini_month = request.args.get("ini_month")
     #msg_j = json.dumps(readXls())
     msg_j = readXls()
     return(ini_month)
