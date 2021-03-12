@@ -5,12 +5,14 @@ import pandas as pd
 app = Flask("CrimeVis")
 
 
-def readXls(ini_month, tp_smart):
+def readXls(ini_month, brand):
     df = pd.read_excel("../src/dataset.xls")
-    if tp_smart == "APPLE":
+    if brand == "APPLE":
         df = df.query('mes == "'+ini_month+'" & marca_celular == "APPLE"')
+    elif brand == "ANDROID":
+        df = df.query('mes == "'+ini_month+'" & marca_celular != "APPLE"')
     else:
-        df = df.query('mes == "'+tp_smart+'"')
+        df = df.query('mes == "'+ini_month+'"')
     df = df[['ano_bo', 'mes', 'latitude', 'longitude', 'rubrica', 'marca_celular']]
     json_msg = df.to_json(orient='index')
     return(json_msg)
@@ -21,9 +23,9 @@ def readXls(ini_month, tp_smart):
 @app.route("/getoccur", methods=["GET"])
 def getOccur():
     ini_month = request.args.get("ini_month")
-    tp_smart = request.args.get("tp_smart")
+    brand = request.args.get("brand")
     #msg_j = json.dumps(readXls())
-    msg_j = readXls(ini_month, tp_smart)
+    msg_j = readXls(ini_month, brand)
     return(msg_j)
 
 
