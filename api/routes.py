@@ -21,7 +21,7 @@ def readXls(ini_month, tp_smart):
 @app.route("/getoccur", methods=["GET"])
 def getOccur():
     ini_month = request.args.get("ini_month")
-    tp_smart = request.args["tp_smart"]
+    tp_smart = request.args.get("tp_smart")
     #msg_j = json.dumps(readXls())
     msg_j = readXls(ini_month, tp_smart)
     return(msg_j)
