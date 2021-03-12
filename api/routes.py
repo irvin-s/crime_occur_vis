@@ -10,7 +10,7 @@ def readXls(ini_month, tp_smart):
     if tp_smart == "APPLE":
         df = df.query('mes == "'+ini_month+'" & marca_celular == "APPLE"')
     else:
-        df.query('mes == "'+tp_smart+'"')
+        df = df.query('mes == "'+tp_smart+'"')
     df = df[['ano_bo', 'mes', 'latitude', 'longitude', 'rubrica', 'marca_celular']]
     json_msg = df.to_json(orient='index')
     return(json_msg)
