@@ -23,7 +23,7 @@ def readXls(ini_month, brand):
 @app.route("/getoccur", methods=["GET"])
 def getOccur():
     ini_month = request.args.get("ini_month")
-    brand = request.args.get("brand")
+    brand = request.args["brand"]
     #msg_j = json.dumps(readXls())
     msg_j = readXls(ini_month, brand)
     return(msg_j)
