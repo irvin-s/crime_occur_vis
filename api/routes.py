@@ -5,9 +5,9 @@ import pandas as pd
 app = Flask("CrimeVis")
 
 
-def readXls():
+def readXls(ini_month):
     df = pd.read_excel("../src/dataset.xls")
-    df = df.query('mes == "Agosto" & marca_celular == "APPLE"')
+    df = df.query('mes == '.ini_month.' & marca_celular == "APPLE"')
     df = df[['ano_bo', 'mes', 'latitude', 'longitude', 'rubrica', 'marca_celular']]
     json_msg = df.to_json(orient='index')
     return(json_msg)
@@ -19,8 +19,8 @@ def readXls():
 def getOccur():
     ini_month = request.args.get("ini_month")
     #msg_j = json.dumps(readXls())
-    msg_j = readXls()
-    return(ini_month)
+    msg_j = readXls(ini_month)
+    return(msg_j)
 
 
 app.run()
