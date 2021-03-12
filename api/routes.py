@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 import json
 import pandas as pd
 
@@ -17,9 +17,10 @@ def readXls():
 
 @app.route("/getoccur", methods=["GET"])
 def getOccur():
+    ini_month = request.arqs.get("ini_month")
     #msg_j = json.dumps(readXls())
     msg_j = readXls()
-    return(msg_j)
+    return(ini_month)
 
 
 app.run()
