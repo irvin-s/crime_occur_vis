@@ -5,12 +5,12 @@ import pandas as pd
 app = Flask("CrimeVis")
 
 
-def readXls(ini_month,tp_smart):
+def readXls(ini_month, tp_smart):
     df = pd.read_excel("../src/dataset.xls")
     if tp_smart == "APPLE":
         df = df.query('mes == "'+ini_month+'" & marca_celular == "APPLE"')
     else:
-        df.query('mes == "'+ini_month+'"')
+        df.query('mes == "'+tp_smart+'"')
     df = df[['ano_bo', 'mes', 'latitude', 'longitude', 'rubrica', 'marca_celular']]
     json_msg = df.to_json(orient='index')
     return(json_msg)
