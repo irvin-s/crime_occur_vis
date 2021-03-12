@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
    <meta charset="UTF-8">
    <title>Visualização Ocorrências Policiais</title>
@@ -6,19 +7,25 @@
    <!--Include Leaflet CSS-->
    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
       integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-      crossorigin=""/>
-   <style> 
-      #mapid { 
-      height: 90%; 
-      position: absolute;
-      width: 80%; }  
+      crossorigin="" />
+   <style>
+      #mapid {
+         height: 90%;
+         position: absolute;
+         width: 80%;
+      }
+
       #menu {
-      float: right;}
-      .label_menu{
-      text-align: center;}
+         float: right;
+      }
+
+      .label_menu {
+         text-align: center;
+      }
    </style>
 </head>
 <div id="container">
+
    <body>
       <h2>Roubos de smartphones</h2>
       <!--<script type="text/javascript">
@@ -34,56 +41,57 @@
             <fieldset>
                <label for="mes_inicio">Mês Inicial:</label>
                <select name="mes_inicio" id="mes_inicio">
-                 <option value="Julho">Julho</option>
-                 <option value="Agosto">Agosto</option>
-                 <option value="Setembro">Setembro</option>
-                 <option value="Outubro">Outubro</option>
-                 <option value="Novembro">Novembro</option>
-                 <option value="Dezembro">Dezembro</option>
+                  <option value="Julho">Julho</option>
+                  <option value="Agosto">Agosto</option>
+                  <option value="Setembro">Setembro</option>
+                  <option value="Outubro">Outubro</option>
+                  <option value="Novembro">Novembro</option>
+                  <option value="Dezembro">Dezembro</option>
                </select>
             </fieldset>
-               <fieldset>
+            <fieldset>
                <label for="mes_fim">Mês Final:</label>
                <select name="mes_fim" id="mes_fim">
-                 <option value="Julho">Julho</option>
-                 <option value="Agosto">Agosto</option>
-                 <option value="Setembro">Setembro</option>
-                 <option value="Outubro">Outubro</option>
-                 <option value="Novembro">Novembro</option>
-                 <option value="Dezembro">Dezembro</option>
+                  <option value="Julho">Julho</option>
+                  <option value="Agosto">Agosto</option>
+                  <option value="Setembro">Setembro</option>
+                  <option value="Outubro">Outubro</option>
+                  <option value="Novembro">Novembro</option>
+                  <option value="Dezembro">Dezembro</option>
                </select>
-              <input type="submit" value="Submit">
-          </form>
+               <input type="submit" value="Submit">
+         </form>
       </div>
       <div id="mapid"></div>
       <script>
-         var mymap = L.map('mapid').setView([-23.5797,-46.6236], 12);
+         var mymap = L.map('mapid').setView([-23.5797, -46.6236], 12);
          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
          }).addTo(mymap);
       </script>
       <script>
-         var marker0 = L.marker([-23.57192578,-46.74381739]).addTo(mymap);
+         var marker0 = L.marker([-23.57192578, -46.74381739]).addTo(mymap);
          marker0.bindPopup("<b>Marca Celular: APPLE</b><br>Roubo (art. 157) - TRANSEUNTE.").openPopup();
-         var marker1 = L.marker([-23.54741811,-46.71609731]).addTo(mymap);
+         var marker1 = L.marker([-23.54741811, -46.71609731]).addTo(mymap);
          marker1.bindPopup("<b>Marca Celular: ASUS</b><br>Roubo (art. 157) - TRANSEUNTE.").openPopup();
-         var marker2 = L.marker([-23.569244,-46.7602021]).addTo(mymap);
+         var marker2 = L.marker([-23.569244, -46.7602021]).addTo(mymap);
          marker2.bindPopup("<b>Marca Celular: MOTOROLA</b><br>Roubo (art. 157) - TRANSEUNTE.").openPopup();
-         var marker3 = L.marker([-23.61425867,-46.67978212]).addTo(mymap);
+         var marker3 = L.marker([-23.61425867, -46.67978212]).addTo(mymap);
          marker3.bindPopup("<b>Marca Celular: LG</b><br>Localização/Apreensão de objeto.").openPopup();
-         var marker4 = L.marker([-23.6666833,-46.6593796]).addTo(mymap);
+         var marker4 = L.marker([-23.6666833, -46.6593796]).addTo(mymap);
          marker4.bindPopup("<b>Marca Celular: SAMSUNG</b><br>Roubo (art. 157) - INTERIOR TRANSPORTE COLETIVO.").openPopup();
-         var marker5 = L.marker([-23.6501027,-46.5955617]).addTo(mymap);
+         var marker5 = L.marker([-23.6501027, -46.5955617]).addTo(mymap);
          marker5.bindPopup("<b>MARCA CELULAR: MOTOROLA</b><br>Roubo (art. 157) - OUTROS.").openPopup();
-         var marker6 = L.marker([-23.6561116,-46.75334971]).addTo(mymap);
+         var marker6 = L.marker([-23.6561116, -46.75334971]).addTo(mymap);
          marker6.bindPopup("<b>MARCA CELULAR: MOTOROLA</b><br>Roubo (art. 157) - OUTROS.").openPopup();
-         var marker7 = L.marker([-23.60246223,-46.48365592]).addTo(mymap);
+         var marker7 = L.marker([-23.60246223, -46.48365592]).addTo(mymap);
          marker7.bindPopup("<b>MARCA CELULAR: MOTOROLA</b><br>Roubo (art. 157) - OUTROS.").openPopup();
-         var marker8 = L.marker([-23.6558312,-46.649928]).addTo(mymap);
+         var marker8 = L.marker([-23.6558312, -46.649928]).addTo(mymap);
          marker8.bindPopup("<b>MARCA CELULAR: SAMSUNG</b><br>Roubo (art. 157) - OUTROS.").openPopup();
-         var marker9 = L.marker([-23.46015682,-46.68779605]).addTo(mymap);
-         marker9.bindPopup("<b>MARCA CELULAR: APPLE</b><br>Roubo (art. 157) - TRANSEUNTE.").openPopup();		
+         var marker9 = L.marker([-23.46015682, -46.68779605]).addTo(mymap);
+         marker9.bindPopup("<b>MARCA CELULAR: APPLE</b><br>Roubo (art. 157) - TRANSEUNTE.").openPopup();
       </script>
 </div>
 </body>
+
 </html>
