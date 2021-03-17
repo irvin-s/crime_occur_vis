@@ -29,6 +29,7 @@
    <body>
       <h2>Roubos de smartphones</h2>
       <script>
+         //Requesting data from the server
          function loadData() {
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
@@ -42,6 +43,12 @@
             var brand = document.getElementById('brand').value
             xhttp.open("GET", "http://api.crimevis.work/getoccur?ini_month=" + month + "&brand=" + brand + "", true);
             xhttp.send();
+         }
+
+         //Adding markers
+         function addMarker() {
+            var marker0 = L.marker([-23.57192578, -46.74381739]).addTo(mymap);
+            marker0.bindPopup("<b>Marca Celular: APPLE</b><br>Roubo (art. 157) - TRANSEUNTE.").openPopup();
          }
       </script>
       <!--<script type="text/javascript">
@@ -83,11 +90,6 @@
          }).addTo(mymap);
       </script>
       <script>
-         function addMarker() {
-            var marker0 = L.marker([-23.57192578, -46.74381739]).addTo(mymap);
-            marker0.bindPopup("<b>Marca Celular: APPLE</b><br>Roubo (art. 157) - TRANSEUNTE.").openPopup();
-         }
-
          addMarker()
       </script>
 </div>
