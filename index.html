@@ -53,12 +53,15 @@
             for (i = 0; i < insMarker.length; i++) {
                var lat = insMarker[i].latitude;
                var lng = insMarker[i].longitude;
+               var marca_celular = insMarker[i].marca_celular;
+               var rubrica = insMarker[i].rubrica;
                var marker = L.marker([lat, lng]).addTo(mymap);
+               marker.bindPopup("<b>Marca Celular: " + marca_celular + "</b><br>" + rubrica + "").openPopup();
             }
             /*var lat = insMarker[0].latitude;
             var lng = insMarker[0].longitude;
             var marker = L.marker([lat, lng]).addTo(mymap);
-            marker.bindPopup("<b>Marca Celular: APPLE</b><br>Roubo (art. 157) - TRANSEUNTE.").openPopup();*/
+            */
          }
       </script>
       <!--<script type="text/javascript">
