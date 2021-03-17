@@ -30,7 +30,7 @@
       <h2>Roubos de smartphones</h2>
       <script>
          //Requesting data from the server
-         
+
          function loadData() {
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
@@ -38,7 +38,7 @@
                   /* document.getElementById("demo").innerHTML =
                       this.responseText;*/
                   var arrMarker = JSON.parse(this.responseText);
-                  setMarker(arrMarker);
+                  addMarker(arrMarker);
                }
             };
             var month = document.getElementById('ini_month').value
@@ -46,17 +46,11 @@
             xhttp.open("GET", "http://api.crimevis.work/getoccur?ini_month=" + month + "&brand=" + brand + "", true);
             xhttp.send();
          }
-         
-         function setMarker(marker) {
-            var marker =  marker;
-            return marker;
-         }
 
          //Adding markers
-         function addMarker() {
-            arrMarker = setMarker();
-            for (i=0; i<arrMarker.length; i++){
-              console.log(arrMarker[$i].latitude)
+         function addMarker(arrMarker) {
+            for (i = 0; i < arrMarker.length; i++) {
+               console.log(arrMarker[$i].latitude)
             }
             var marker0 = L.marker([-23.57192578, -46.74381739]).addTo(mymap);
             marker0.bindPopup("<b>Marca Celular: APPLE</b><br>Roubo (art. 157) - TRANSEUNTE.").openPopup();
@@ -100,9 +94,9 @@
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
          }).addTo(mymap);
       </script>
-      <script>
-         addMarker()
-      </script>
+      <!--<script>
+         //addMarker()
+      </script>-->
 </div>
 </body>
 
