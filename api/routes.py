@@ -15,7 +15,7 @@ def readXls(ini_month, brand):
     else:
         df = df.query('mes == "'+ini_month+'"')
     df = df[['ano_bo', 'mes', 'latitude', 'longitude', 'rubrica', 'marca_celular']]
-    json_msg = df.to_json(orient='index')
+    json_msg = df.to_json(orient='records')
     return(json_msg)
 
 # App routes
