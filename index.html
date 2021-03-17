@@ -45,12 +45,12 @@
             xhttp.open("GET", "http://api.crimevis.work/getoccur?ini_month=" + month + "&brand=" + brand + "", true);
             xhttp.send();
          }
-
+         console.log(arrMarker)
          //Adding markers
          function addMarker() {
             var i;
             for (i=0; i<arrMarker.length; i++){
-               console.log(arrMarker)
+              // console.log(arrMarker)
             }
             var marker0 = L.marker([-23.57192578, -46.74381739]).addTo(mymap);
             marker0.bindPopup("<b>Marca Celular: APPLE</b><br>Roubo (art. 157) - TRANSEUNTE.").openPopup();
