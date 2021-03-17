@@ -51,8 +51,8 @@
          function addMarker(insMarker) {
             var i;
             for (i = 0; i < insMarker.length; i++) {
-               var lat = insMarker[0].latitude;
-               var lng = insMarker[0].longitude;
+               var lat = insMarker[i].latitude;
+               var lng = insMarker[i].longitude;
                var marker = L.marker([lat, lng]).addTo(mymap);
             }
             /*var lat = insMarker[0].latitude;
