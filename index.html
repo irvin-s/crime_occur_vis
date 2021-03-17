@@ -38,7 +38,7 @@
                   /* document.getElementById("demo").innerHTML =
                       this.responseText;*/
                   var arrMarker = JSON.parse(this.responseText);
-                  addMarker(arrMarker);
+                  addMarker.forEach(arrMarker);
                }
             };
             var month = document.getElementById('ini_month').value
@@ -48,15 +48,15 @@
          }
 
          //Adding markers
-         function addMarker(insMarker = []) {
-            var i;
+         function addMarker(insMarker) {
+            //var i;
             //console.log(insMarker[0].latitude);
             /*for (i = 0; i<insMarker.length; i++) {
                console.log(insMarker[i].latitude);
             }*/
-            var lat = insMarker[22770].latitude;
-            var lng = insMarker[22770].longitude;
-            var marker0 = L.marker([lat, lng]).addTo(mymap);
+            var lat = insMarker.latitude;
+            var lng = insMarker.longitude;
+            var marker = L.marker([lat, lng]).addTo(mymap);
             /*marker0.bindPopup("<b>Marca Celular: APPLE</b><br>Roubo (art. 157) - TRANSEUNTE.").openPopup();*/
          }
       </script>
