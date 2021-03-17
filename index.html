@@ -33,14 +33,14 @@
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
                if (this.readyState == 4 && this.status == 200) {
-                 /* document.getElementById("demo").innerHTML =
-                     this.responseText;*/
+                  /* document.getElementById("demo").innerHTML =
+                      this.responseText;*/
                   console.log(this.responseText)
                }
             };
             var month = document.getElementById('ini_month').value
             var brand = document.getElementById('brand').value
-            xhttp.open("GET", "http://api.crimevis.work/getoccur?ini_month=${month}&brand=${brand}", true);
+            xhttp.open("GET", "http://api.crimevis.work/getoccur?ini_month=" + month + "&brand=" + brand + "", true);
             xhttp.send();
          }
       </script>
