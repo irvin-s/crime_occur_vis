@@ -9,7 +9,6 @@ cors = CORS(app, resources={r"/getoccur/*": {"origins": "*"}})
 def readXls(ini_month, brand):
     df = pd.read_excel("../src/dataset.xls")
     df = df.dropna(subset=['latitude', 'longitude'])
-    df = df.iloc[:500].max()
     if brand == "APPLE":
         df = df.query('mes == "'+ini_month+'" & marca_celular == "APPLE"')
     elif brand == "ANDROID":
@@ -17,6 +16,7 @@ def readXls(ini_month, brand):
     else:
         df = df.query('mes == "'+ini_month+'"')
     df = df[['ano_bo', 'mes', 'latitude', 'longitude', 'rubrica', 'marca_celular']]
+    df = df.iloc[:500].max()
     json_msg = df.to_json(orient='records')
     return(json_msg)
 
