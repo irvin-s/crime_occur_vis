@@ -38,6 +38,7 @@
                   /* document.getElementById("demo").innerHTML =
                       this.responseText;*/
                   var arrMarker = JSON.parse(this.responseText);
+                  console.log(arrMarker[0].latitude)
                   addMarker(arrMarker);
                }
             };
@@ -49,7 +50,7 @@
 
          //Adding markers
          function addMarker(insMarker) {
-            console.log(insMarker[0].latitude)
+            //console.log(insMarker[0].latitude)
             /*for (i = 0; i >= 20; i++) {
                console.log(arrMarker[$i].latitude)
             }*/
