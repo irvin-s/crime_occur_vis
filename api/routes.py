@@ -8,7 +8,8 @@ cors = CORS(app, resources={r"/getoccur/*": {"origins": "*"}})
 
 def readXls(ini_month, brand):
     df = pd.read_excel("../src/dataset.xls")
-    df = df[0:500].dropna(subset=['latitude', 'longitude'])
+    df = df.dropna(subset=['latitude', 'longitude'])
+    df = df.iloc[:500].max()
     if brand == "APPLE":
         df = df.query('mes == "'+ini_month+'" & marca_celular == "APPLE"')
     elif brand == "ANDROID":
