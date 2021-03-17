@@ -53,7 +53,7 @@
             for (i = 0; i<insMarker.length; i++) {
                console.log(insMarker[i].latitude);
             }
-            var marker0 = L.marker([-23.57192578, -46.74381739]).addTo(mymap);
+            var marker0 = L.marker([insMarker[0].latitude, insMarker[0].longitude]).addTo(mymap);
             marker0.bindPopup("<b>Marca Celular: APPLE</b><br>Roubo (art. 157) - TRANSEUNTE.").openPopup();
          }
       </script>
