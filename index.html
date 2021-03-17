@@ -38,7 +38,9 @@
                   console.log(this.responseText)
                }
             };
-            xhttp.open("GET", "http://api.crimevis.work/getoccur?ini_month=Julho&brand=APPLE", true);
+            var month = document.getElementById('ini_month').value
+            var brand = document.getElementById('brand').value
+            xhttp.open("GET", "http://api.crimevis.work/getoccur?ini_month=${month}&brand=${brand}", true);
             xhttp.send();
          }
       </script>
@@ -54,7 +56,7 @@
          <form action="#">
             <fieldset>
                <label for="mes_inicio">Mês :</label>
-               <select name="ini_month" id="mes_inicio">
+               <select name="ini_month" id="ini_month">
                   <option value="Julho">Julho</option>
                   <option value="Agosto">Agosto</option>
                   <option value="Setembro">Setembro</option>
