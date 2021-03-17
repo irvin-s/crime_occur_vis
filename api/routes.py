@@ -4,7 +4,7 @@ import json
 import pandas as pd
 
 app = Flask("CrimeVis")
-cors = CORS(app, resources={r"/*": {"origins": "*"}})
+cors = CORS(app, resources={r"/getoccur/*": {"origins": "*"}})
 
 def readXls(ini_month, brand):
     df = pd.read_excel("../src/dataset.xls")
