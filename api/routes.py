@@ -1,9 +1,10 @@
 from flask import Flask, request
+from flask_cors import CORS
 import json
 import pandas as pd
 
 app = Flask("CrimeVis")
-
+cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
 def readXls(ini_month, brand):
     df = pd.read_excel("../src/dataset.xls")
@@ -24,7 +25,6 @@ def readXls(ini_month, brand):
 def getOccur():
     ini_month = request.args.get("ini_month")
     brand = request.args["brand"]
-    msg_j.headers.add('Access-Control-Allow-Origin', '*')
     #msg_j = json.dumps(readXls())
     msg_j = readXls(ini_month, brand)
     return(msg_j)
