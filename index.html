@@ -45,7 +45,7 @@
             xhttp.open("GET", "http://api.crimevis.work/getoccur?ini_month=" + month + "&brand=" + brand + "", true);
             xhttp.send();
          }
-         console.log(arrMarker)
+         console.log(arrMarker[0].latitude)
          //Adding markers
          function addMarker() {
             var i;
