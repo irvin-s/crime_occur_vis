@@ -33,8 +33,9 @@
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
                if (this.readyState == 4 && this.status == 200) {
-                  document.getElementById("demo").innerHTML =
-                     this.responseText;
+                 /* document.getElementById("demo").innerHTML =
+                     this.responseText;*/
+                  console.log(this.responseText)
                }
             };
             xhttp.open("GET", "http://api.crimevis.work/getoccur?ini_month=Julho&brand=APPLE", true);
@@ -52,7 +53,7 @@
          <h4 class="label_menu">Menu</h4>
          <form action="http://api.crimevis.work/getoccur" method="get">
             <fieldset>
-               <label for="mes_inicio">Mês Inicial:</label>
+               <label for="mes_inicio">Mês :</label>
                <select name="ini_month" id="mes_inicio">
                   <option value="Julho">Julho</option>
                   <option value="Agosto">Agosto</option>
