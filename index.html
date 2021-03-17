@@ -30,7 +30,7 @@
       <h2>Roubos de smartphones</h2>
       <script>
          //Requesting data from the server
-         var arrMarker= [];
+         
          function loadData() {
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
@@ -38,6 +38,7 @@
                   /* document.getElementById("demo").innerHTML =
                       this.responseText;*/
                   var arrMarker = JSON.parse(this.responseText);
+                  setMarker(arrMarker);
                }
             };
             var month = document.getElementById('ini_month').value
@@ -45,10 +46,15 @@
             xhttp.open("GET", "http://api.crimevis.work/getoccur?ini_month=" + month + "&brand=" + brand + "", true);
             xhttp.send();
          }
-         console.log(arrMarker[0].latitude)
+         
+         function setMarker(marker) {
+            var marker =  marker;
+            return marker;
+         }
+
          //Adding markers
          function addMarker() {
-            var i;
+            arrMarker = setMarker();
             for (i=0; i<arrMarker.length; i++){
               console.log(arrMarker[$i].latitude)
             }
