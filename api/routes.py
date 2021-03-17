@@ -24,6 +24,7 @@ def readXls(ini_month, brand):
 def getOccur():
     ini_month = request.args.get("ini_month")
     brand = request.args["brand"]
+    msg_j.headers.add('Access-Control-Allow-Origin', '*')
     #msg_j = json.dumps(readXls())
     msg_j = readXls(ini_month, brand)
     return(msg_j)
