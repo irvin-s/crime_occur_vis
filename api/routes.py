@@ -16,7 +16,7 @@ def readXls(ini_month, brand):
     else:
         df = df.query('mes == "'+ini_month+'"')
     df = df[['ano_bo', 'mes', 'latitude', 'longitude', 'rubrica', 'marca_celular']]
-    df = df.iloc[:500].max()
+    df = df.iloc[0:500].max()
     json_msg = df.to_json(orient='records')
     return(json_msg)
 
