@@ -38,11 +38,6 @@
                   /* document.getElementById("demo").innerHTML =
                       this.responseText;*/
                   var arrMarker = JSON.parse(this.responseText);
-                  if (typeof marker === 'undefined') {
-                     
-                  }else{
-                     mymap.removeLayer(marker);
-                  }
                   addMarker(arrMarker);
                }
             };
@@ -55,6 +50,13 @@
          //Adding markers
          function addMarker(insMarker) {
             var i;
+            if (typeof marker === 'undefined') {
+                     
+                  }else{
+                     for (i = 0; i < insMarker.length; i++) {
+                     mymap.removeLayer(marker);
+                     }
+                  }
             for (i = 0; i < insMarker.length; i++) {
                var lat = insMarker[i].latitude;
                var lng = insMarker[i].longitude;
