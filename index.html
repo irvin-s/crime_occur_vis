@@ -15,7 +15,7 @@
          width: 80%;
       }
 
-      #menu {
+      #menu, #description {
          float: right;
       }
 
@@ -99,13 +99,11 @@
                </select>
                <input type="button" value="Selecionar" onclick="loadData()">
          </form>
+      </div>
+      <div id="description">
          <fieldset>APPLE</fieldset>
          <fieldset>ANDROID</fieldset>
       </div>
-      <!--<div id="description">
-         <fieldset>APPLE</fieldset>
-         <fieldset>ANDROID</fieldset>
-      </div>-->
       <div id="mapid"></div>
       <script>
          var mymap = L.map('mapid').setView([-23.5797, -46.6236], 12);
