@@ -50,7 +50,6 @@
          //Adding markers
          function addMarker(insMarker) {
             var i;
-            //mymap.removeLayer(marker);
             for (i = 0; i < insMarker.length; i++) {
                var lat = insMarker[i].latitude;
                var lng = insMarker[i].longitude;
@@ -100,6 +99,10 @@
                </select>
                <input type="button" value="Selecionar" onclick="loadData()">
          </form>
+      </div>
+      <div id="description">
+         <fieldset>APPLE</fieldset>
+         <fieldset>ANDROID</fieldset>
       </div>
       <div id="mapid"></div>
       <script>
