@@ -38,6 +38,10 @@
                   /* document.getElementById("demo").innerHTML =
                       this.responseText;*/
                   var arrMarker = JSON.parse(this.responseText);
+                  mymap.eachLayer(function (layer) {
+                     mymap.removeLayer('marker');
+                  });
+
                   addMarker(arrMarker);
                }
             };
