@@ -38,7 +38,11 @@
                   /* document.getElementById("demo").innerHTML =
                       this.responseText;*/
                   var arrMarker = JSON.parse(this.responseText);
-                  marker.remove();
+                  if (typeof marker === 'undefined'){
+                     
+                  }else{
+                     marker.remove();
+                  }
                   addMarker(arrMarker);
                }
             };
