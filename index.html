@@ -50,11 +50,7 @@
          //Adding markers
          function addMarker(insMarker) {
             var i;
-            if (typeof marker == 'undefined') {
-                     
-                  }else{
-                     mymap.removeLayer(marker);
-                  }
+            mymap.removeLayer(marker);
             for (i = 0; i < insMarker.length; i++) {
                var lat = insMarker[i].latitude;
                var lng = insMarker[i].longitude;
