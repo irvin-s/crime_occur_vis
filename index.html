@@ -50,14 +50,18 @@
          //Adding markers
          function addMarker(insMarker) {
             var i;
-            mymap.removeLayer.marker
             for (i = 0; i < insMarker.length; i++) {
                var lat = insMarker[i].latitude;
                var lng = insMarker[i].longitude;
                var marca_celular = insMarker[i].marca_celular;
                var rubrica = insMarker[i].rubrica;
-               var marker = L.circleMarker([lat, lng], {color: '#006600'}).addTo(mymap);
-               marker.bindPopup("<b>Marca Celular: " + marca_celular + "</b><br>" + rubrica + "").openPopup();
+               if (marca_celular == "APPLE"){
+                  var marker = L.circleMarker([lat, lng], {color: '#ff0000'}).addTo(mymap);
+                  marker.bindPopup("<b>Marca Celular: " + marca_celular + "</b><br>" + rubrica + "").openPopup();
+               }else{
+                  var marker = L.circleMarker([lat, lng], {color: '#00ff04'}).addTo(mymap);
+                  marker.bindPopup("<b>Marca Celular: " + marca_celular + "</b><br>" + rubrica + "").openPopup();
+               }
             }
             /*var lat = insMarker[0].latitude;
             var lng = insMarker[0].longitude;
