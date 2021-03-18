@@ -62,7 +62,7 @@
                var lng = insMarker[i].longitude;
                var marca_celular = insMarker[i].marca_celular;
                var rubrica = insMarker[i].rubrica;
-               var marker = L.marker([lat, lng]).addTo(mymap);
+               var marker = L.circleMarker([lat, lng]).addTo(mymap);
                marker.bindPopup("<b>Marca Celular: " + marca_celular + "</b><br>" + rubrica + "").openPopup();
             }
             /*var lat = insMarker[0].latitude;
