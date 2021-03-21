@@ -32,11 +32,11 @@ Install our requirements:
 pip3 install -r requirements.txt
 ```
 
-### 01 - Installation
+## 01 - Installation
 
 - The tool is divided into two parts: the front-end and the API.
 
-#### API
+### API
 
 - First, go to the API directory:
 
@@ -54,7 +54,7 @@ python3 api/routes.py
 http://localhost:5000/getoccur?ini_month=Julho&brand=APPLE
 ```
 
-#### Front-end
+### Front-end
 
 - Before opening the visualization in a web-browser check the API address.
 
@@ -66,7 +66,7 @@ http://localhost:5000/getoccur?ini_month=Julho&brand=APPLE
 xhttp.open("GET", "http://api.crimevis.work
 ```
 
-### 02 - Execution
+## 02 - Execution
 
 - Using your favorite web-browser open `index.html`
 
@@ -75,7 +75,7 @@ xhttp.open("GET", "http://api.crimevis.work
 - After loading data, it is possible to check, location, brand, and the kind of occurrence.
 
 
-### 03 - Live demo
+## 03 - Live demo
 
 - There is a live demo available at <a href="http://crimevis.work">crimevis.work</a>
 
