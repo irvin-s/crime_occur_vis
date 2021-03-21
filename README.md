@@ -9,6 +9,12 @@ This tool is intended to create a crime map visualization from a smartphone burg
     - Leaflet.sj
 
 - Back-End
+    - Python
+    - Pandas
+    - Flask
+
+- Dataset
+    - The dataset was downloaded from São Paulo state open data site.
 
  ## Usage / Setup
 To use the crime_occur_vis, use Linux or Windows, and install the following requirements.
@@ -28,21 +34,36 @@ pip3 install -r requirements.txt
 
 ### 01 - Installation
 
-- Before executing the building, insert the Dockerfiles names in: `image_list.txt`
+- The tool is divided into two parts: the front-end and the API.
 
-- To select what Dockerfiles to build `${ROOT_DIR}/notes/sizesortedlist-dockerfiles.txt`
-    - The filename must have this format `sources/228568839.Dockerfile`
+#### A - API
 
-- To build Dockerfiles run the script:
+- First, go to the API directory:
+
+    - Change to directory `api/`
+
+- Then run the API with the following python script:
 
 ```
-./build_test.sh
+python3 api/routes.py
 ```
 
-- The generated logs will be located under directory `${ROOT_DIR}/logs/`. Logs for build failures
-  will be at `${ROOT_DIR}/logs/fail` and logs of successful builds will be at `${ROOT_DIR}/logs/success`.
+ - The API will run in the following address:
 
-- Files that contain "returned a non-zero code" will be in `${ROOT_DIR}/results/files_to_analyze.log`
+```
+http://localhost:5000/getoccur?ini_month=Julho&brand=APPLE
+```
+#### Front-end
+
+- Before opening the visualization in a web-browser check the API address.
+
+- Using your favorite IDE open the following file `index.html`
+
+ - Go to line 46 and change the API address:
+ 
+```
+xhttp.open("GET", "http://api.crimevis.work
+```
 
 ### 02 - Execution
 
