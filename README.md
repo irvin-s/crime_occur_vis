@@ -68,11 +68,11 @@ xhttp.open("GET", "http://api.crimevis.work
 
 ### 02 - Execution
 
-- Using you favorite web-browser open `index.html`
+- Using your favorite web-browser open `index.html`
 
 - Select month and smartphone brand.
 
-- After loading data, it is possivel check, location, brand and the kind of occurrence.
+- After loading data, it is possible to check, location, brand, and the kind of occurrence.
 
 
 ### 03 - Live demo
