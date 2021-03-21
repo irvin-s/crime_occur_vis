@@ -6,7 +6,7 @@ This tool is intended to create a crime map visualization from a smartphone burg
 - Front-End
     - HTML5
     - CSS3
-    - Leaflet.sj
+    - Leaflet.js
 
 - Back-End
     - Python
