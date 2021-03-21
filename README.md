@@ -14,7 +14,7 @@ This tool is intended to create a crime map visualization from a smartphone burg
     - Flask
 
 - Dataset
-    - The dataset was downloaded from São Paulo state open data site.
+    - The dataset was downloaded from São Paulo state <a href="http://www.ssp.sp.gov.br/transparenciassp/Consulta.aspx">open data site.</a>
 
  ## Usage / Setup
 To use the crime_occur_vis, use Linux or Windows, and install the following requirements.
@@ -77,7 +77,7 @@ xhttp.open("GET", "http://api.crimevis.work
 
 ### 03 - Live demo
 
-- There is a live demo available at <a href="http://crimevis.work" target="_blank">crimevis.work</a>
+- There is a live demo available at <a href="http://crimevis.work">crimevis.work</a>
 
 ## Preliminaries
 
