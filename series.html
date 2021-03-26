@@ -80,7 +80,7 @@
       <div id="menu">
          <h4 class="label_menu">Menu</h4>
          <form action="#">
-            <!--<fieldset>
+            <fieldset>
                <label for="mes_inicio">Mês :</label>
                <select name="ini_month" id="ini_month">
                   <option value="Julho">Julho</option>
@@ -99,7 +99,7 @@
                   <option value="AMBOS">AMBOS</option>
                </select>
                <input type="button" value="Selecionar" onclick="loadData()">
-            </fieldset>-->
+            </fieldset>
             <br />
             <br />
             <br />
@@ -127,7 +127,7 @@
             var viz
             function initViz() {
                var containerDiv = document.getElementById("mapid"),
-                  url = "https://public.tableau.com/views/Ocorrncias_16160398327900/Painel1?:language=pt&:display_count=y&publish=yes&:origin=viz_share_link";
+                  url = "https://us-east-1.online.tableau.com/t/zuar/views/Regional/GlobalTemperatures";
 
                viz = new tableau.Viz(containerDiv, url);
             }
