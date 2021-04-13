@@ -58,9 +58,9 @@ http://localhost:5000/getoccur?ini_month=Julho&brand=APPLE
 
 - Before opening the visualization in a web-browser check the API address.
 
-- Using your favorite IDE open the following file `index.html`
+- Using your favorite IDE open the following file `assets/js/site.js`
 
- - Go to line 46 and change the API address:
+ - Go to line 15 and change the API address:
  
 ```
 xhttp.open("GET", "http://api.crimevis.work
