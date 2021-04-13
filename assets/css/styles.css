@@ -1,0 +1,43 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.header {
+  grid-column: 1 / -1;
+  margin-bottom: 30px;
+}
+
+.content {
+  grid-column: 1 / 9;
+  justify-content: center;
+}
+
+.menu {
+  grid-column: 11 / -1;
+}
+
+.menu-box {
+  display: grid;
+  row-gap: 8px;
+}
+
+.legend-box {
+  position: relative;
+  display: grid;
+  row-gap: 8px;
+  grid-template-columns: 100px 100px;
+}
+
+.legend-box-text {
+  position: absolute;
+  bottom: calc(27%);
+  margin-left: 5px;
+}
+
+#mapid {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  border-radius: 8px;
+}
