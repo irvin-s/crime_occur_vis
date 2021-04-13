@@ -15,5 +15,5 @@ def getOccur():
     msg_j = data_class.readXls(ini_month, brand)
     return(msg_j)
 
-if __name__ =="_main_":
+if __name__ =="getOccur":
     app.run()
