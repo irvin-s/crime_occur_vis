@@ -3,7 +3,7 @@ import pandas as pd
 import duckdb
 
 #Create a function to convert xls duckbd database and filter by month and brand limited to 1000 records
-def readXlsFromDuckDB(ini_month, brand):
+def readXls(ini_month, brand):
     
     con = duckdb.connect(database=':memory:')
     if brand == "APPLE":
