@@ -12,7 +12,7 @@ function loadData() {
   var brand = document.getElementById("brand").value;
   xhttp.open(
     "GET",
-    "http://api.crimevis.work/getoccur?ini_month=" +
+    "http://192.168.15.86:5000/getoccur?ini_month=" +
       month +
       "&brand=" +
       brand +
