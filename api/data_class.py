@@ -10,21 +10,21 @@ def readXls(ini_month, brand):
     if brand == "APPLE":
         query = f"""
         SELECT ano_bo, mes, latitude, longitude, rubrica, marca_celular
-        FROM read_xlsx('../data/dataset.xlsx',  empty_as_varchar = true)
+        FROM read_xlsx('../data/dataset.xlsx', all_varchar = true)
         WHERE mes = '{ini_month}' AND marca_celular = 'APPLE'
         LIMIT 1000
         """
     elif brand == "ANDROID":
         query = f"""
         SELECT ano_bo, mes, latitude, longitude, rubrica, marca_celular
-        FROM read_xlsx('../data/dataset.xlsx', empty_as_varchar = true)
+        FROM read_xlsx('../data/dataset.xlsx', all_varchar = true)
         WHERE mes = '{ini_month}' AND marca_celular != 'APPLE'
         LIMIT 1000
         """
     else:
         query = f"""
         SELECT ano_bo, mes, latitude, longitude, rubrica, marca_celular
-        FROM read_xlsx('../data/dataset.xlsx', empty_as_varchar = true)
+        FROM read_xlsx('../data/dataset.xlsx', all_varchar = true)
         WHERE mes = '{ini_month}'
         LIMIT 1000
         """
